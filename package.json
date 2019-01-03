@@ -4,7 +4,9 @@
   "description": "An API REST created with Typescript and using Express and Firestore modules",
   "main": "./build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc .",
+    "run": "node .",
+    "watch": "tsc . --watch && nodemon ."
   },
   "repository": {
     "type": "git",

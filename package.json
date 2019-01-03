@@ -5,7 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "build": "tsc",
-    "run": "node",
+    "start": "node",
     "lint": "tslint --project tsconfig.json",
     "watch": "tsc --watch && nodemon"
   },

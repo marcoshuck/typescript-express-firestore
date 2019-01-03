@@ -24,11 +24,38 @@ Compile and run the application every time some change has been made.
 ## Project structure
 ```
 \---src
+    |   app.ts
+    |   db.ts
+    |   index.ts
+    |   
     +---controllers
+    |   |   controller.ts
+    |   |   example.controller.ts
+    |   |   
     |   \---interfaces
+    |           controller.interface.ts
+    |           
     +---models
+    |   |   example.model.ts
+    |   |   
     |   \---interfaces
+    |           example.interface.ts
+    |           
     +---repositories
+    |   |   firestore.repository.ts
+    |   |   
     |   \---interfaces
+    |           firestore.interface.ts
+    |           
     +---routes
+    |       example.routes.ts
+    |       index.ts
+    |       
+    \---views
+
 ```
+
+## ToDo
+- JWT
+- Model validation
+- View rendering

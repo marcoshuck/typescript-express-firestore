@@ -5,6 +5,9 @@ An API REST created with Typescript and using Express and Firestore modules
 This application was created using NodeJS, you can look at the package.json file for more information about what packages have been used.
 There are several commands that you can use:
 
+### Before start working on code
+`yarn install` or `npm install`
+
 ### Building
 `npm run build`
 Get the ./build directory with js files.

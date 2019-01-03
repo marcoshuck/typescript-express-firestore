@@ -4,11 +4,8 @@ An API REST created with Typescript and using Express and Firestore modules
 ## Getting started
 This application was created using NodeJS, you can look at the package.json file for more information about what packages have been used.
 
-You need to create a keys folder in the application root directory, and inside of it, you should move the .json file provided by Google Firestore. Read more information about this: [Google Firestore SDK documentation](https://firebase.google.com/docs/admin/setup?authuser=0).
+You need to create a keys folder in the application root directory, and inside of it, you should move the .json file provided by Google Firestore. Read more information about this: [Google Firestore SDK documentation](https://firebase.google.com/docs/admin/setup?authuser=0). This file is required in [db.ts](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/db.ts#L3)
 
-This file is required in [db.ts](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/db.ts#L3)
-
-There are several commands that you can use:
 
 ### Before start working on code
 `yarn install` or `npm install`

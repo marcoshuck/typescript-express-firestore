@@ -1,0 +1,24 @@
+{
+  "name": "typescript-express-firestore",
+  "version": "1.0.0",
+  "description": "An API REST created with Typescript and using Express and Firestore modules",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoshuck/typescript-express-firestore.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Express",
+    "Firestore"
+  ],
+  "author": "Marcos A. Huck <marcos@huck.com.ar>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcoshuck/typescript-express-firestore/issues"
+  },
+  "homepage": "https://github.com/marcoshuck/typescript-express-firestore#readme"
+}

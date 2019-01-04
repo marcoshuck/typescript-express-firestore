@@ -12,19 +12,26 @@ You need to create a keys folder in the application root directory, and inside o
 
 ### Building
 `npm run build`
-Get the ./build directory with js files.
+Gets the ./build directory with js files.
 
 ### Source code analysis
 `npm run lint`
-Use lint to analyze the source code.
+Uses lint to analyze the source code.
 
 ### Starting the application
 `npm run start`
-Run the application in a node instance.
+Runs the application in a node instance.
 
-### Watch mode
-`npm run watch`
-Compile and run the application every time some change has been made.
+### Watch mode (build)
+`npm run build-watch`
+Compiles the application every time some change has been made.
+
+### Watch mode (start)
+`npm run start-watch`
+Runs the application every time some change has been made. Should be run in parallel with Build watch mode.
+
+## API Endpoint
+In this application there is only one endpoint available, it's the (https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7)[examples] endpoint.
 
 ## Project structure
 ```

@@ -31,7 +31,7 @@ Compiles the application every time some change has been made.
 Runs the application every time some change has been made. Should be run in parallel with Build watch mode.
 
 ## API Endpoint
-In this application there is only one endpoint available, it's the (https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7)[examples] endpoint.
+In this application there is only one endpoint available, it's the [examples](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7) endpoint.
 
 ## Project structure
 ```

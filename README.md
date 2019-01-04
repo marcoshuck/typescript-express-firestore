@@ -1,6 +1,8 @@
 # TypeScript + Express + Firestore
 An API REST created with Typescript and using Express and Firestore modules
 
+[![](https://travis-ci.org/marcoshuck/typescript-express-firestore.svg?branch=master)](https://travis-ci.org/marcoshuck/typescript-express-firestore) ![](https://img.shields.io/github/forks/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/stars/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/license/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/issues/marcoshuck/typescript-express-firestore.svg)
+
 ## Getting started
 This application was created using NodeJS, you can look at the package.json file for more information about what packages have been used.
 

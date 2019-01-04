@@ -1,7 +1,6 @@
 language: nodejs
 
 before_script:
-  - npm install -g yarn --yes
-  - yarn install
+  - npm install
 script:
   - npm run build

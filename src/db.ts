@@ -4,7 +4,7 @@ const key = require('../keys/serviceAccountKey.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(key),
-    databaseURL: "https://example.firebaseio.com"
+    databaseURL: "https://fencing-tournament.firebaseio.com"
 });
 
 const db: FirebaseFirestore.Firestore = admin.firestore();

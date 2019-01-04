@@ -61,4 +61,7 @@ typings/
 .next
 
 # Output directory
-./build/
+build/
+
+# Keys directory
+keys/

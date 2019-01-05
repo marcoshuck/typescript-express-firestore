@@ -40,7 +40,6 @@ In this application there is only one endpoint available, it's the [examples](ht
 |   .gitignore
 |   .travis.yml
 |   LICENSE
-|   output.txt
 |   package.json
 |   README.md
 |   tsconfig.json

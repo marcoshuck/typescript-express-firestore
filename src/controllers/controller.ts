@@ -1,8 +1,9 @@
-import {Request, Response} from 'express';
+import {Request, Response, NextFunction} from 'express';
 import db from '../db';
 import FirestoreRepository from '../repositories/firestore.repository';
 import IController from './interfaces/controller.interface';
 import { DocumentData, DocumentSnapshot } from '@google-cloud/firestore';
+import CustomError from '../utils/error.interface';
 
 export default class Controller implements IController {
 
@@ -12,10 +13,12 @@ export default class Controller implements IController {
         this.repository = new FirestoreRepository(db, collectionName);
     }
     
-    create(req: Request, res: Response): DocumentData | undefined {
+    create(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
         let data: DocumentData | undefined;
         if(req.body == null) {
-            res.status(400).send('The body was empty or undefined');
+            let err: CustomError = new Error("The body was empty or undefined") as CustomError;
+            err.status = 400;
+            next(err);
             return;
         }
         this.repository.create(req.body).then((value) => {
@@ -25,35 +28,35 @@ export default class Controller implements IController {
                 }
                 return data;
             }));
-        }).catch(() => {
-            res.status(400).send("Could not create a new entity");
+        }).catch((reason) => {
+            next(reason);
         });
         return data;
     }    
 
-    readOne(req: Request, res: Response): DocumentData | undefined {
+    readOne(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
         if(req.params.id == null) {
-            res.status(400).send('The id was undefined');
+            let err: CustomError = new Error("The id was undefined") as CustomError;
+            err.status = 400;
+            next(err);
             return;
         }
         this.repository.readOne(req.params.id).then(async (value) => {
             res.status(200).send((await value.get()).data());
-        }).catch(() => {
-            res.status(400).send("Could not read the desired entity");
+        }).catch((reason) => {
+            next(reason);
         });
         return;
     }
 
-    readAll(req: Request, res: Response): DocumentData[] | undefined {
+    readAll(req: Request, res: Response, next: NextFunction): DocumentData[] | undefined {
         let dataArray: Array<DocumentData>;
         let promises: Array<Promise<DocumentSnapshot>>;
-        if(req.params.id) {
-            res.status(400).send("Could not perform the reading all operation because there is a params.id declared in the request");
-            return;
-        }
         this.repository.readAll().then(async (list) => {
             if(list.length == 0) {
-                res.status(400).send("The list of entities is empty");
+                let err: CustomError = new Error("The list of entities was empty") as CustomError;
+                err.status = 204;
+                next(err);
                 return;
             }
             promises = new Array<Promise<DocumentSnapshot>>();
@@ -69,20 +72,23 @@ export default class Controller implements IController {
                 return dataArray;
             });
         })
-        .catch(() => {
-            res.status(400).send("Could not read all entities");
-            return;
+        .catch((reason) => {
+            next(reason);
         });
         return;
     }
-    update(req: Request, res: Response): DocumentData | undefined {
+    update(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
         if(req.body == null) {
-            res.status(400).send('The body was empty or undefined');
+            let err: CustomError = new Error("The body was empty or undefined") as CustomError;
+            err.status = 400;
+            next(err);
             return;
         }
 
         if(req.params.id == null) {
-            res.status(400).send('The request did not have param id');
+            let err: CustomError = new Error("The id was undefined") as CustomError;
+            err.status = 400;
+            next(err);
             return;
         }
 
@@ -90,21 +96,23 @@ export default class Controller implements IController {
         .then(async (value) => {
             res.status(200).send((await value.get()).data());
         })
-        .catch(() => {
-            res.status(400).send("Could not perform the updating operation");
+        .catch((reason) => {
+            next(reason);
         });
         return;
     }
-    delete(req: Request, res: Response): DocumentData | undefined {
+    delete(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
         if(req.params.id == null) {
-            res.status(400).send('The id was undefined.');
+            let err: CustomError = new Error("The id was undefined") as CustomError;
+            err.status = 400;
+            next(err);
             return;
         }
 
         this.repository.delete(req.params.id).then(() => {
             res.status(200).send('The object was deleted.');
-        }).catch(() => {
-            res.status(400).send("Could not perform the removing operation.");
+        }).catch((reason) => {
+            next(reason);
         });
 
         return;

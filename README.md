@@ -37,39 +37,54 @@ In this application there is only one endpoint available, it's the [examples](ht
 
 ## Project structure
 ```
-\---src
-    |   app.ts
-    |   db.ts
-    |   index.ts
-    |   
-    +---controllers
-    |   |   controller.ts
-    |   |   example.controller.ts
-    |   |   
-    |   \---interfaces
-    |           controller.interface.ts
-    |           
-    +---models
-    |   |   example.model.ts
-    |   |   
-    |   \---interfaces
-    |           example.interface.ts
-    |           
-    +---repositories
-    |   |   firestore.repository.ts
-    |   |   
-    |   \---interfaces
-    |           firestore.interface.ts
-    |           
-    +---routes
-    |       example.routes.ts
-    |       index.ts
-    |       
-    \---views
+|   .gitignore
+|   .travis.yml
+|   LICENSE
+|   output.txt
+|   package.json
+|   README.md
+|   tsconfig.json
+|   yarn.lock
+|       
++---src
+|   |   app.ts
+|   |   db.ts
+|   |   index.ts
+|   |   
+|   +---controllers
+|   |   |   controller.ts
+|   |   |   example.controller.ts
+|   |   |   
+|   |   \---interfaces
+|   |           controller.interface.ts
+|   |           
+|   +---middleware
+|   |       error.middleware.ts
+|   |       
+|   +---models
+|   |   |   example.model.ts
+|   |   |   
+|   |   \---interfaces
+|   |           example.interface.ts
+|   |           
+|   +---repositories
+|   |   |   firestore.repository.ts
+|   |   |   
+|   |   \---interfaces
+|   |           firestore.interface.ts
+|   |           
+|   +---routes
+|   |       example.routes.ts
+|   |       index.ts
+|   |       
+|   \---utils
+|           error.interface.ts
+|           
+\---views
+        error.pug
 
 ```
 
 ## ToDo
 - JWT
 - Model validation
-- View rendering

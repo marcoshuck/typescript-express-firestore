@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/marcoshuck/typescript-express-firestore#readme",
   "devDependencies": {
+    "@firebase/app-types": "^0.3.2",
     "@types/cors": "^2.8.4",
     "@types/express": "^4.16.0",
     "nodemon": "^1.18.9",
@@ -33,6 +34,7 @@
     "typescript": "^3.2.2"
   },
   "dependencies": {
+    "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "firebase-admin": "^6.4.0",

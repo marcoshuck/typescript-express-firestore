@@ -1,6 +1,9 @@
 import {Request, Response} from 'express';
 import Controller from './controller';
 import { NextFunction } from 'connect';
+import Example from '../models/example.model';
+import {validate} from 'class-validator';
+import CustomError from '../utils/error.interface';
 
 
 export default class ExampleController {
@@ -8,8 +11,20 @@ export default class ExampleController {
 
     static create(req: Request, res: Response, next: NextFunction): void {
         let controller: Controller = new Controller(ExampleController.collectionName);
-        controller.create(req, res, next);
-        return;
+        let example: Example = new Example();
+        example = req.body;
+        validate(example, {
+          forbidUnknownValues: true
+        }).then(errors => {
+          if(errors.length > 0) {
+            let err: CustomError = new Error("The body was not validated") as CustomError;
+            err.status = 400;
+            next(err);
+            return;
+          }
+          controller.create(req, res, next);
+          return;
+        });
     }
 
     static readOne(req: Request, res: Response, next: NextFunction): void {

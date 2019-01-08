@@ -1,10 +1,11 @@
 import * as admin from 'firebase-admin';
+import FIRESTORE_DB from './env';
 
 const key = require('../keys/serviceAccountKey.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(key),
-    databaseURL: "https://example.firebaseio.com"
+    databaseURL: FIRESTORE_DB
 });
 
 const db: FirebaseFirestore.Firestore = admin.firestore();

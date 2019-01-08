@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TypeScript + Express + Firestore - API Rest</title>
+	<title>typescript-express-firestore</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">TypeScript + Express + Firestore - API Rest</a>
+					<a href="index.html" class="title">typescript-express-firestore</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> TypeScript + Express + Firestore - API Rest</h1>
+			<h1> typescript-express-firestore</h1>
 		</div>
 	</div>
 </header>
@@ -88,6 +88,7 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#firestore_db" class="tsd-kind-icon">FIRESTORE_<wbr>DB</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#app" class="tsd-kind-icon">app</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#db" class="tsd-kind-icon">db</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#key" class="tsd-kind-icon">key</a></li>
@@ -106,6 +107,16 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="firestore_db" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> FIRESTORE_<wbr>DB</h3>
+					<div class="tsd-signature tsd-kind-icon">FIRESTORE_<wbr>DB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;process.env.FIRESTORE_DB</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in env.ts:7</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="app" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> app</h3>
 					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Express</span><span class="tsd-signature-symbol"> =&nbsp;express.default()</span></div>
@@ -121,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">db<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Firestore</span><span class="tsd-signature-symbol"> =&nbsp;admin.firestore()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in db.ts:10</li>
+							<li>Defined in db.ts:11</li>
 						</ul>
 					</aside>
 				</section>
@@ -131,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&#x27;../keys/serviceAccountKey.json&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in db.ts:3</li>
+							<li>Defined in db.ts:4</li>
 						</ul>
 					</aside>
 				</section>
@@ -216,6 +227,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/ifirestorerepository.html" class="tsd-kind-icon">IFirestore<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#firestore_db" class="tsd-kind-icon">FIRESTORE_<wbr>DB</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#app" class="tsd-kind-icon">app</a>

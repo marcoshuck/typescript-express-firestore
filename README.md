@@ -37,6 +37,7 @@ In this application there is only one endpoint available, it's the [examples](ht
 
 ## Project structure
 ```
+|   .env
 |   .gitignore
 |   .travis.yml
 |   LICENSE
@@ -44,10 +45,14 @@ In this application there is only one endpoint available, it's the [examples](ht
 |   README.md
 |   tsconfig.json
 |   yarn.lock
-|       
+|   
++---keys
+|       serviceAccountKey.json
+|                 
 +---src
 |   |   app.ts
 |   |   db.ts
+|   |   env.ts
 |   |   index.ts
 |   |   
 |   +---controllers
@@ -81,9 +86,7 @@ In this application there is only one endpoint available, it's the [examples](ht
 |           
 \---views
         error.pug
-
 ```
 
 ## ToDo
 - JWT
-- Model validation

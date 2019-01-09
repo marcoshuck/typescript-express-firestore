@@ -11,7 +11,7 @@ import CustomError from '../utils/error.interface';
 export default class ExampleController {
 
   /**
-   * The collection's name use by this controller.
+   * The collection's name used by this controller.
    */
   public static readonly collectionName: string = "examples";
 

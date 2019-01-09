@@ -5,49 +5,82 @@ import Example from '../models/example.model';
 import {validate} from 'class-validator';
 import CustomError from '../utils/error.interface';
 
-
+/**
+ * The specific ExampleController used by the examples route handler.
+ */
 export default class ExampleController {
-    public static readonly collectionName: string = "examples";
 
-    static create(req: Request, res: Response, next: NextFunction): void {
-        let controller: Controller = new Controller(ExampleController.collectionName);
-        let example: Example = new Example();
-        example = req.body;
-        validate(example, {
-          forbidUnknownValues: true
-        }).then(errors => {
-          if(errors.length > 0) {
-            let err: CustomError = new Error("The body was not validated") as CustomError;
-            err.status = 400;
-            next(err);
-            return;
-          }
-          controller.create(req, res, next);
-          return;
-        });
-    }
+  /**
+   * The collection's name use by this controller.
+   */
+  public static readonly collectionName: string = "examples";
 
-    static readOne(req: Request, res: Response, next: NextFunction): void {
-        let controller: Controller = new Controller(ExampleController.collectionName);
-        controller.readOne(req, res, next);
+  /**
+   * A static method used to parse, validate and create a new Example document.
+   * @param req The request received by the API Rest
+   * @param res The response sent by the API Rest
+   * @param next The next function executed in the app's middleware
+   */
+  static create(req: Request, res: Response, next: NextFunction): void {
+    let controller: Controller = new Controller(ExampleController.collectionName);
+    let example: Example = new Example();
+    example = req.body;
+    validate(example, { forbidUnknownValues: true }).then(errors => {
+      if(errors.length > 0) {
+        let err: CustomError = new Error("The body was not validated") as CustomError;
+        err.status = 400;
+        next(err);
         return;
-    }
+      }
+      controller.create(req, res, next);
+      return;
+    });
+  }
+  /**
+   * A static method used to read one Example document by the given id.
+   * @param req The request received by the API Rest
+   * @param res The response sent by the API Rest
+   * @param next The next function executed in the app's middleware
+   */
+  static readOne(req: Request, res: Response, next: NextFunction): void {
+    let controller: Controller = new Controller(ExampleController.collectionName);
+    controller.readOne(req, res, next);
+    return;
+  }
 
-    static readAll(req: Request, res: Response, next: NextFunction): void {
-        let controller: Controller = new Controller(ExampleController.collectionName);
-        controller.readAll(req, res, next);
-        return;
-    }
+  /**
+   * A static method used to read all Example documents.
+   * @param req The request received by the API Rest
+   * @param res The response sent by the API Rest
+   * @param next The next function executed in the app's middleware
+   */
+  static readAll(req: Request, res: Response, next: NextFunction): void {
+    let controller: Controller = new Controller(ExampleController.collectionName);
+    controller.readAll(req, res, next);
+    return;
+  }
 
-    static update(req: Request, res: Response, next: NextFunction): void {
-        let controller: Controller = new Controller(ExampleController.collectionName);
-        controller.update(req, res, next);
-        return;
-    }
-    
-    static delete(req: Request, res: Response, next: NextFunction): void {
-        let controller: Controller = new Controller(ExampleController.collectionName);
-        controller.delete(req, res, next);
-        return;
-    }
+  /**
+   * A static method used to update certain fields of an Example document by the given id.
+   * @param req The request received by the API Rest
+   * @param res The response sent by the API Rest
+   * @param next The next function executed in the app's middleware
+   */
+  static update(req: Request, res: Response, next: NextFunction): void {
+    let controller: Controller = new Controller(ExampleController.collectionName);
+    controller.update(req, res, next);
+    return;
+  }
+
+  /**
+   * A static method used to delete an Example document by the given id.
+   * @param req The request received by the API Rest
+   * @param res The response sent by the API Rest
+   * @param next The next function executed in the app's middleware
+   */
+  static delete(req: Request, res: Response, next: NextFunction): void {
+    let controller: Controller = new Controller(ExampleController.collectionName);
+    controller.delete(req, res, next);
+    return;
+  }
 }

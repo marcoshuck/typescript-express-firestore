@@ -2,6 +2,9 @@ import IExample from "./interfaces/example.interface";
 import { Timestamp } from "@google-cloud/firestore";
 import {IsString, IsNotEmpty, IsAlpha} from "class-validator";
 
+/**
+ * An example schema
+ */
 export default class Example implements IExample {
   @IsString()
   @IsAlpha()

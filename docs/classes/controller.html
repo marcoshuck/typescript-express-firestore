@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Controller | typescript-express-firestore</title>
+	<title>Controller | Typescript + Express + Firestore - API Rest</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">typescript-express-firestore</a>
+					<a href="../index.html" class="title">Typescript + Express + Firestore - API Rest</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -66,6 +66,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Modular Controller with CRUD methods using Firestore repository and DocumentData type.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,7 +128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in controllers/controller.ts:10</li>
+									<li>Defined in controllers/controller.ts:16</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -143,9 +150,14 @@
 					<div class="tsd-signature tsd-kind-icon">repository<span class="tsd-signature-symbol">:</span> <a href="firestorerepository.html" class="tsd-signature-type">FirestoreRepository</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in controllers/controller.ts:10</li>
+							<li>Defined in controllers/controller.ts:16</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Firebase repository used by CRUD methods.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -161,19 +173,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icontroller.html">IController</a>.<a href="../interfaces/icontroller.html#create">create</a></p>
 								<ul>
-									<li>Defined in controllers/controller.ts:16</li>
+									<li>Defined in controllers/controller.ts:28</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a document in Firestore collection using the DocumentData received in the request body.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request received by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The response sent by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The next function executed in the app&#39;s middleware</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DocumentData</span>
@@ -194,19 +220,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icontroller.html">IController</a>.<a href="../interfaces/icontroller.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in controllers/controller.ts:104</li>
+									<li>Defined in controllers/controller.ts:142</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Delete document by the given id</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request received by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The response sent by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The next function executed in the app&#39;s middleware</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DocumentData</span>
@@ -227,19 +267,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icontroller.html">IController</a>.<a href="../interfaces/icontroller.html#readall">readAll</a></p>
 								<ul>
-									<li>Defined in controllers/controller.ts:52</li>
+									<li>Defined in controllers/controller.ts:76</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Read all documents available in the Firestore collection.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request received by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The response sent by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The next function executed in the app&#39;s middleware</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DocumentData</span><span class="tsd-signature-symbol">[]</span>
@@ -260,19 +314,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icontroller.html">IController</a>.<a href="../interfaces/icontroller.html#readone">readOne</a></p>
 								<ul>
-									<li>Defined in controllers/controller.ts:37</li>
+									<li>Defined in controllers/controller.ts:55</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Read one document by the given id.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request received by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The response sent by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The next function executed in the app&#39;s middleware</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DocumentData</span>
@@ -293,19 +361,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/icontroller.html">IController</a>.<a href="../interfaces/icontroller.html#update">update</a></p>
 								<ul>
-									<li>Defined in controllers/controller.ts:80</li>
+									<li>Defined in controllers/controller.ts:111</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update document fields by the given id.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>req: <span class="tsd-signature-type">Request</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The request received by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The response sent by the API Rest</p>
+									</div>
 								</li>
 								<li>
 									<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The next function executed in the app&#39;s middleware</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DocumentData</span>

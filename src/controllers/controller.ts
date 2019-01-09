@@ -33,9 +33,9 @@ export default class Controller implements IController {
       return;
     }
     this.repository.create(req.body).then((value) => {
-      res.status(200).send(value.get().then((value) => {
-        if (value.data()) {
-          data = value.data();
+      res.status(200).send(value.get().then((document) => {
+        if (document.data()) {
+          data = document.data();
         }
         return data;
       }));

@@ -48,11 +48,9 @@ In this application there is only one endpoint available, it's the [examples](ht
 |   package.json
 |   README.md
 |   tsconfig.json
+|   tslint.json
 |   yarn.lock
-|   
-+---keys
-|       serviceAccountKey.json
-|                 
+|                
 +---src
 |   |   app.ts
 |   |   db.ts

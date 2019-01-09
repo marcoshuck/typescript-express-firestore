@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 
 dotenv.config({
-  path: "../"
+  path: "../",
 });
 
 const FIRESTORE_DB = process.env.FIRESTORE_DB;

@@ -1,9 +1,9 @@
-import {Request, Response} from "express";
-import Controller from "./controller";
-import { NextFunction } from "connect";
-import Example from "../models/example.model";
 import {validate} from "class-validator";
+import { NextFunction } from "connect";
+import {Request, Response} from "express";
+import Example from "../models/example.model";
 import CustomError from "../utils/error.interface";
+import Controller from "./controller";
 
 /**
  * The specific ExampleController used by the examples route handler.
@@ -22,12 +22,12 @@ export default class ExampleController {
    * @param next The next function executed in the app's middleware
    */
   public static create(req: Request, res: Response, next: NextFunction): void {
-    let controller: Controller = new Controller(ExampleController.collectionName);
+    const controller: Controller = new Controller(ExampleController.collectionName);
     let example: Example = new Example();
     example = req.body;
-    validate(example, { forbidUnknownValues: true }).then(errors => {
-      if(errors.length > 0) {
-        let err: CustomError = new Error("The body was not validated") as CustomError;
+    validate(example, { forbidUnknownValues: true }).then((errors) => {
+      if (errors.length > 0) {
+        const err: CustomError = new Error("The body was not validated") as CustomError;
         err.status = 400;
         next(err);
         return;
@@ -43,7 +43,7 @@ export default class ExampleController {
    * @param next The next function executed in the app's middleware
    */
   public static readOne(req: Request, res: Response, next: NextFunction): void {
-    let controller: Controller = new Controller(ExampleController.collectionName);
+    const controller: Controller = new Controller(ExampleController.collectionName);
     controller.readOne(req, res, next);
     return;
   }
@@ -55,7 +55,7 @@ export default class ExampleController {
    * @param next The next function executed in the app's middleware
    */
   public static readAll(req: Request, res: Response, next: NextFunction): void {
-    let controller: Controller = new Controller(ExampleController.collectionName);
+    const controller: Controller = new Controller(ExampleController.collectionName);
     controller.readAll(req, res, next);
     return;
   }
@@ -67,7 +67,7 @@ export default class ExampleController {
    * @param next The next function executed in the app's middleware
    */
   public static update(req: Request, res: Response, next: NextFunction): void {
-    let controller: Controller = new Controller(ExampleController.collectionName);
+    const controller: Controller = new Controller(ExampleController.collectionName);
     controller.update(req, res, next);
     return;
   }
@@ -79,7 +79,7 @@ export default class ExampleController {
    * @param next The next function executed in the app's middleware
    */
   public static delete(req: Request, res: Response, next: NextFunction): void {
-    let controller: Controller = new Controller(ExampleController.collectionName);
+    const controller: Controller = new Controller(ExampleController.collectionName);
     controller.delete(req, res, next);
     return;
   }

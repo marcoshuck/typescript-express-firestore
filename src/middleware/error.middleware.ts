@@ -1,5 +1,5 @@
-import {Request, Response, NextFunction} from 'express';
-import CustomError from '../utils/error.interface';
+import {NextFunction, Request, Response} from "express";
+import CustomError from "../utils/error.interface";
 
 /**
  * Middleware function used on the request's pipeline to deliver error messages.
@@ -9,10 +9,10 @@ import CustomError from '../utils/error.interface';
  * @param next The next function executed in the app's middleware
  */
 export default function errorMiddleware(err: Error, req: Request, res: Response, next: NextFunction) {
-    let error: CustomError = <CustomError>err;
-    res.status(error.status || 500).render('error', {
-        status: error.status || 500,
-        message: error.message,
-        error: err
-    });
+  const error: CustomError = err as CustomError;
+  res.status(error.status || 500).render("error", {
+    error: err,
+    message: error.message,
+    status: error.status || 500,
+  });
 }

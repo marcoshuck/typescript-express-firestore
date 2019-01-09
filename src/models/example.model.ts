@@ -1,6 +1,6 @@
-import IExample from "./interfaces/example.interface";
 import { Timestamp } from "@google-cloud/firestore";
-import {IsString, IsNotEmpty, IsAlpha} from "class-validator";
+import {IsAlpha, IsNotEmpty, IsString} from "class-validator";
+import IExample from "./interfaces/example.interface";
 
 /**
  * An example schema
@@ -20,7 +20,6 @@ export default class Example implements IExample {
   @IsAlpha()
   @IsNotEmpty()
   public lastName?: string;
-
 
   @IsNotEmpty()
   public birthday?: Timestamp;

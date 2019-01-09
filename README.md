@@ -32,6 +32,10 @@ Compiles the application every time some change has been made.
 `npm run start-watch`
 Runs the application every time some change has been made. Should be run in parallel with Build watch mode.
 
+### Documentation
+`npm run doc`
+Generates the project's documentation using typedoc.
+
 ## API Endpoint
 In this application there is only one endpoint available, it's the [examples](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7) endpoint.
 

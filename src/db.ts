@@ -1,7 +1,7 @@
-import * as admin from 'firebase-admin';
-import FIRESTORE_DB from './env';
+import * as admin from "firebase-admin";
+import FIRESTORE_DB from "./env";
 
-const key = require('../keys/serviceAccountKey.json');
+const key = require("../keys/serviceAccountKey.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(key),

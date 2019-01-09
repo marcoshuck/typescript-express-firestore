@@ -1,9 +1,9 @@
-import {Request, Response} from 'express';
-import Controller from './controller';
-import { NextFunction } from 'connect';
-import Example from '../models/example.model';
-import {validate} from 'class-validator';
-import CustomError from '../utils/error.interface';
+import {Request, Response} from "express";
+import Controller from "./controller";
+import { NextFunction } from "connect";
+import Example from "../models/example.model";
+import {validate} from "class-validator";
+import CustomError from "../utils/error.interface";
 
 /**
  * The specific ExampleController used by the examples route handler.
@@ -21,7 +21,7 @@ export default class ExampleController {
    * @param res The response sent by the API Rest
    * @param next The next function executed in the app's middleware
    */
-  static create(req: Request, res: Response, next: NextFunction): void {
+  public static create(req: Request, res: Response, next: NextFunction): void {
     let controller: Controller = new Controller(ExampleController.collectionName);
     let example: Example = new Example();
     example = req.body;
@@ -42,7 +42,7 @@ export default class ExampleController {
    * @param res The response sent by the API Rest
    * @param next The next function executed in the app's middleware
    */
-  static readOne(req: Request, res: Response, next: NextFunction): void {
+  public static readOne(req: Request, res: Response, next: NextFunction): void {
     let controller: Controller = new Controller(ExampleController.collectionName);
     controller.readOne(req, res, next);
     return;
@@ -54,7 +54,7 @@ export default class ExampleController {
    * @param res The response sent by the API Rest
    * @param next The next function executed in the app's middleware
    */
-  static readAll(req: Request, res: Response, next: NextFunction): void {
+  public static readAll(req: Request, res: Response, next: NextFunction): void {
     let controller: Controller = new Controller(ExampleController.collectionName);
     controller.readAll(req, res, next);
     return;
@@ -66,7 +66,7 @@ export default class ExampleController {
    * @param res The response sent by the API Rest
    * @param next The next function executed in the app's middleware
    */
-  static update(req: Request, res: Response, next: NextFunction): void {
+  public static update(req: Request, res: Response, next: NextFunction): void {
     let controller: Controller = new Controller(ExampleController.collectionName);
     controller.update(req, res, next);
     return;
@@ -78,7 +78,7 @@ export default class ExampleController {
    * @param res The response sent by the API Rest
    * @param next The next function executed in the app's middleware
    */
-  static delete(req: Request, res: Response, next: NextFunction): void {
+  public static delete(req: Request, res: Response, next: NextFunction): void {
     let controller: Controller = new Controller(ExampleController.collectionName);
     controller.delete(req, res, next);
     return;

@@ -1,5 +1,5 @@
-import {Request, Response, NextFunction} from 'express';
-import { DocumentData } from '@google-cloud/firestore';
+import { DocumentData } from "@google-cloud/firestore";
+import {NextFunction, Request, Response} from "express";
 
 export default interface IController {
     create(req: Request, res: Response, next: NextFunction): DocumentData | undefined;

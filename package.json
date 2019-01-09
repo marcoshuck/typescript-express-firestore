@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "tslint --project tslint.json",
     "build-watch": "tsc --watch",
     "start-watch": "nodemon",
     "doc": "typedoc --out docs --mode file --name \"Typescript + Express + Firestore - API Rest\""

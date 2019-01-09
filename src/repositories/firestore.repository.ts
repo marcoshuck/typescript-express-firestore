@@ -1,5 +1,5 @@
-import IFirestoreRepository from './interfaces/firestore.interface';
-import { DocumentData, DocumentReference, CollectionReference, Firestore } from '@google-cloud/firestore';
+import { CollectionReference, DocumentData, DocumentReference, Firestore } from "@google-cloud/firestore";
+import IFirestoreRepository from "./interfaces/firestore.interface";
 
 export default class FirestoreRepository implements IFirestoreRepository {
   public readonly collection: CollectionReference;
@@ -8,55 +8,48 @@ export default class FirestoreRepository implements IFirestoreRepository {
     this.collection = db.collection(collectionName);
   }
 
-  async create(object: DocumentData): Promise<DocumentReference> {
+  public async create(object: DocumentData): Promise<DocumentReference> {
     try {
       return await this.collection.add(object);
-    }
-    catch {
+    } catch {
       throw new Error("Could not create object");
     }
   }
 
-  async readOne(id: string): Promise<DocumentReference> {
+  public async readOne(id: string): Promise<DocumentReference> {
     try {
       return await this.collection.doc(id);
-    }
-    catch {
+    } catch {
       throw new Error("Could not read object");
     }
   }
 
-  async readAll(): Promise<DocumentReference[]> {
+  public async readAll(): Promise<DocumentReference[]> {
     try {
       return await this.collection.listDocuments();
-    }
-    catch {
+    } catch {
       throw new Error("Could not read all objects");
     }
   }
 
-  async update(id: string, object: DocumentData): Promise<DocumentReference> {
+  public async update(id: string, object: DocumentData): Promise<DocumentReference> {
     try {
       let ref: DocumentReference;
       ref = this.collection.doc(id);
       await ref.update(object);
       return ref;
-    }
-    catch {
+    } catch {
       throw new Error("Could not update object");
     }
   }
 
-  async delete(id: string): Promise<DocumentReference> {
+  public async delete(id: string): Promise<DocumentReference> {
     try {
-      let ref: DocumentReference = this.collection.doc(id);
+      const ref: DocumentReference = this.collection.doc(id);
       await ref.delete();
       return ref;
-    }
-    catch {
+    } catch {
       throw new Error("Could not remove object");
     }
   }
-
-
 }

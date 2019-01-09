@@ -6,4 +6,5 @@ before_script:
   - yarn install
   
 script:
+  - npm run lint
   - npm run build

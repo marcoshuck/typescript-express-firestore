@@ -84,7 +84,7 @@ describe("FirestoreRepository", () => {
       });
     });
 
-    it("cannot delete an wrong or undefined id", (done) => {
+    it("cannot delete a wrong or undefined id", (done) => {
       const newDocument: DocumentData = {name: "A document to be deleted"};
       repository.create(newDocument).then((newRef) => {
         repository.delete(newRef.id + "error").then((deletedRef) => {

@@ -1,6 +1,5 @@
 import {validate} from "class-validator";
-import { NextFunction } from "connect";
-import {Request, Response} from "express";
+import {NextFunction, Request, Response} from "express";
 import Example from "../models/example.model";
 import CustomError from "../utils/error.interface";
 import Controller from "./controller";
@@ -34,6 +33,8 @@ export default class ExampleController {
       }
       controller.create(req, res, next);
       return;
+    }).catch((err) => {
+      next(err);
     });
   }
   /**

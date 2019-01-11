@@ -1,0 +1,29 @@
+{
+  "functions": {
+    "predeploy": [
+      "yarn --prefix ./ lint",
+      "yarn --prefix ./ build"
+    ],
+    "source": "."
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/tests/**",
+      "**/docs/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/public/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

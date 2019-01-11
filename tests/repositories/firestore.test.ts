@@ -37,6 +37,8 @@ describe("FirestoreRepository", () => {
         }).catch((err) => {
           done(err);
         });
+      }).catch((err) => {
+        done(err);
       });
     });
   });
@@ -64,6 +66,8 @@ describe("FirestoreRepository", () => {
         }).catch((err) => {
           done(err);
         });
+      }).catch((err) => {
+        done(err);
       });
     });
   });
@@ -80,7 +84,11 @@ describe("FirestoreRepository", () => {
           }).catch((err) => {
             done(err);
           });
+        }).catch((err) => {
+          done(err);
         });
+      }).catch((err) => {
+        done(err);
       });
     });
 
@@ -101,7 +109,11 @@ describe("FirestoreRepository", () => {
             done(err);
           });
           done();
+        }).catch((err) => {
+          done(err);
         });
+      }).catch((err) => {
+        done(err);
       });
     });
   });

@@ -1,6 +1,4 @@
+import * as functions from "firebase-functions";
 import app from "./app";
 
-export default app.listen(8080, () => {
-    // tslint:disable-next-line:no-console
-    console.log("Initializing API: TypeScript + Express + Firestore");
-});
+export const api = functions.https.onRequest(app);

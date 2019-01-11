@@ -1473,10 +1473,10 @@ finalhandler@1.1.1:
     statuses "~1.4.0"
     unpipe "~1.0.0"
 
-firebase-admin@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-6.4.0.tgz#55c288f4e324bc89174bad39735c78475eae7235"
-  integrity sha512-sqRfD4UbDA9r1tX/TPbtpYhcajLr+APqlNps7HrFfrqYBfNXLkkZbnx6Bbbbii3XPJZ5Dcwfl9saxHahsLkpCw==
+firebase-admin@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-6.5.0.tgz#61954e57f595850af184c6eafad9612c2aa196bc"
+  integrity sha512-0ejmbmx8VCjVCZVxpvVckDqFOULEL455eNtyJOGag4QmCE8n89J5X9GhR027mdHis5mpIiGJtnqpe6jO3E6QZA==
   dependencies:
     "@firebase/app" "^0.3.4"
     "@firebase/database" "^0.3.6"
@@ -3859,10 +3859,10 @@ tslib@^1.8.0, tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
 
-tslint@^5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.12.0.tgz#47f2dba291ed3d580752d109866fb640768fca36"
-  integrity sha512-CKEcH1MHUBhoV43SA/Jmy1l24HJJgI0eyLbBNSRyFlsQvb9v6Zdq+Nz2vEOH00nC5SUx4SneJ59PZUS/ARcokQ==
+tslint@^5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.12.1.tgz#8cec9d454cf8a1de9b0a26d7bdbad6de362e52c1"
+  integrity sha512-sfodBHOucFg6egff8d1BvuofoOQ/nOeYNfbp7LDlKBcLNrL3lmS5zoiDGyOMdT7YsEXAwWpTdAHwOGOc8eRZAw==
   dependencies:
     babel-code-frame "^6.22.0"
     builtin-modules "^1.1.1"
@@ -3919,10 +3919,10 @@ typedoc-default-themes@^0.5.0:
   resolved "https://registry.yarnpkg.com/typedoc-default-themes/-/typedoc-default-themes-0.5.0.tgz#6dc2433e78ed8bea8e887a3acde2f31785bd6227"
   integrity sha1-bcJDPnjti+qOiHo6zeLzF4W9Yic=
 
-typedoc@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.14.0.tgz#f7de2f3f1109b92eeafd6cbff269e28a86c8079e"
-  integrity sha512-9DOYWO6O02YGZfbNOrELtmpQF4Eba/6AfNQNt46iRuIokoEq1Axdz9Ae/XjgdoXsM2ShGlDZsAO36BwRVz/Nmw==
+typedoc@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.14.1.tgz#5e659f7a78ccac91547cb2328490665d9c10c4b2"
+  integrity sha512-gM8ajT1oPk/EHfwp60SECcW0p2MfdxhLfBE6zl9/P2DV8vDnE+a5XRgdIRym1X2Ffv8FQ7WPbNaOQbHoESh65g==
   dependencies:
     "@types/fs-extra" "^5.0.3"
     "@types/handlebars" "^4.0.38"

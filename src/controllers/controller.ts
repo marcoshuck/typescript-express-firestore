@@ -26,7 +26,7 @@ export default class Controller implements IController {
    */
   public create(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
     let data: DocumentData | undefined;
-    if (req.body == null) {
+    if (req.body === null) {
       const err: CustomError = new Error("The body was empty or undefined") as CustomError;
       err.status = 400;
       next(err);
@@ -51,7 +51,7 @@ export default class Controller implements IController {
    * @param next The next function executed in the app's middleware
    */
   public readOne(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
-    if (req.params.id == null) {
+    if (req.params.id === null) {
       const err: CustomError = new Error("The id was undefined") as CustomError;
       err.status = 400;
       next(err);
@@ -105,14 +105,14 @@ export default class Controller implements IController {
    * @param next The next function executed in the app's middleware
    */
   public update(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
-    if (req.body == null) {
+    if (req.body === null) {
       const err: CustomError = new Error("The body was empty or undefined") as CustomError;
       err.status = 400;
       next(err);
       return;
     }
 
-    if (req.params.id == null) {
+    if (req.params.id === null) {
       const err: CustomError = new Error("The id was undefined") as CustomError;
       err.status = 400;
       next(err);
@@ -135,7 +135,7 @@ export default class Controller implements IController {
    * @param next The next function executed in the app's middleware
    */
   public delete(req: Request, res: Response, next: NextFunction): DocumentData | undefined {
-    if (req.params.id == null) {
+    if (req.params.id === null) {
       const err: CustomError = new Error("The id was undefined") as CustomError;
       err.status = 400;
       next(err);

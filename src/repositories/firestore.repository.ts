@@ -1,4 +1,5 @@
-import { CollectionReference, DocumentData, DocumentReference, Firestore, DocumentSnapshot } from "@google-cloud/firestore";
+import { CollectionReference, DocumentData, DocumentReference,
+  DocumentSnapshot, Firestore } from "@google-cloud/firestore";
 import IFirestoreRepository from "./interfaces/firestore.interface";
 
 export default class FirestoreRepository implements IFirestoreRepository {

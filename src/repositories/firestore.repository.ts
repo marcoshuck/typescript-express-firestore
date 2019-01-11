@@ -1,4 +1,4 @@
-import { CollectionReference, DocumentData, DocumentReference, Firestore } from "@google-cloud/firestore";
+import { CollectionReference, DocumentData, DocumentReference, Firestore, DocumentSnapshot } from "@google-cloud/firestore";
 import IFirestoreRepository from "./interfaces/firestore.interface";
 
 export default class FirestoreRepository implements IFirestoreRepository {
@@ -34,8 +34,11 @@ export default class FirestoreRepository implements IFirestoreRepository {
 
   public async update(id: string, object: DocumentData): Promise<DocumentReference> {
     try {
-      let ref: DocumentReference;
-      ref = this.collection.doc(id);
+      const ref: DocumentReference = this.collection.doc(id);
+      const snap: DocumentSnapshot = await ref.get();
+      if (!snap.exists) {
+        return ref;
+      }
       await ref.update(object);
       return ref;
     } catch {

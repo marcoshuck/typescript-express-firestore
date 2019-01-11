@@ -9,7 +9,7 @@
     "lint": "tslint --project tslint.json",
     "build-watch": "tsc --watch",
     "start-watch": "nodemon",
-    "test": "mocha --require ts-node/register tests/**/*.ts --timeout 4000",
+    "test": "mocha --require ts-node/register tests/**/*.ts --timeout 20000",
     "doc": "typedoc --out docs --mode file --name \"Typescript + Express + Firestore - API Rest\" --exclude tests/**/*.ts"
   },
   "repository": {
@@ -30,11 +30,13 @@
   "devDependencies": {
     "@firebase/app-types": "^0.3.2",
     "@types/chai": "^4.1.7",
+    "@types/chai-http": "^3.0.5",
     "@types/cors": "^2.8.4",
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.0",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
     "ts-node": "^7.0.1",

@@ -8,6 +8,7 @@ This project has or uses the following features:
 - Typescript.
 - Express.
 - Google Firestore.
+- Linting
 - Model - View - Controller pattern.
 - SOLID principles.
 - Class validation.

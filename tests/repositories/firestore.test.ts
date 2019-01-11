@@ -83,5 +83,26 @@ describe("FirestoreRepository", () => {
         });
       });
     });
+
+    it("cannot delete an wrong or undefined id", (done) => {
+      const newDocument: DocumentData = {name: "A document to be deleted"};
+      repository.create(newDocument).then((newRef) => {
+        repository.delete(newRef.id + "error").then((deletedRef) => {
+          deletedRef.get().then((snap) => {
+            // tslint:disable-next-line:no-unused-expression
+            expect(snap.exists).to.be.false;
+          }).catch((err) => {
+            done(err);
+          });
+          newRef.get().then((snap) => {
+            // tslint:disable-next-line:no-unused-expression
+            expect(snap.exists).to.be.true;
+          }).catch((err) => {
+            done(err);
+          });
+          done();
+        });
+      });
+    });
   });
 });

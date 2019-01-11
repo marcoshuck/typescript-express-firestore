@@ -50,15 +50,17 @@ Generates the project's documentation using typedoc.
 
 ## API Endpoint
 In this application there is only one endpoint available, it's the [examples](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7) endpoint.
+You can check how any route works reading its specific controller class. For further information about the examples route, you can read the [ExampleController](https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/controllers/example.controller.ts) class.
+
+## Test
+The firestore test is related to my own firestore database. You can play around with the source file to understand mocha and chai modules. Be sure to check and change the id argument in both read and update methods.
 
 ## Project structure
 ```
-|   .env
 |   .env.example
 |   .gitignore
 |   .travis.yml
 |   LICENSE
-|   output.txt
 |   package.json
 |   README.md
 |   tsconfig.json

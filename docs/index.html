@@ -104,14 +104,15 @@
 				<p><code>npm run doc</code>
 				Generates the project&#39;s documentation using typedoc.</p>
 				<h2 id="api-endpoint">API Endpoint</h2>
-				<p>In this application there is only one endpoint available, it&#39;s the <a href="https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7">examples</a> endpoint.</p>
+				<p>In this application there is only one endpoint available, it&#39;s the <a href="https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/routes/index.ts#L7">examples</a> endpoint.
+				You can check how any route works reading its specific controller class. For further information about the examples route, you can read the <a href="https://github.com/marcoshuck/typescript-express-firestore/blob/master/src/controllers/example.controller.ts">ExampleController</a> class.</p>
+				<h2 id="test">Test</h2>
+				<p>The firestore test is related to my own firestore database. You can play around with the source file to understand mocha and chai modules. Be sure to check and change the id argument in both read and update methods.</p>
 				<h2 id="project-structure">Project structure</h2>
-				<pre><code>|<span class="hljs-string">   .env
-</span>|<span class="hljs-string">   .env.example
+				<pre><code>|<span class="hljs-string">   .env.example
 </span>|<span class="hljs-string">   .gitignore
 </span>|<span class="hljs-string">   .travis.yml
 </span>|<span class="hljs-string">   LICENSE
-</span>|<span class="hljs-string">   output.txt
 </span>|<span class="hljs-string">   package.json
 </span>|<span class="hljs-string">   README.md
 </span>|<span class="hljs-string">   tsconfig.json

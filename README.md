@@ -1,7 +1,7 @@
 # TypeScript + Express + Firestore
 An API REST created with Typescript and using Express and Firestore modules
 
-[![](https://travis-ci.org/marcoshuck/typescript-express-firestore.svg?branch=master)](https://travis-ci.org/marcoshuck/typescript-express-firestore) ![](https://img.shields.io/github/forks/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/stars/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/license/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/issues/marcoshuck/typescript-express-firestore.svg)
+[![](https://travis-ci.org/marcoshuck/typescript-express-firestore.svg?branch=master)](https://travis-ci.org/marcoshuck/typescript-express-firestore) [![](https://david-dm.org/marcoshuck/typescript-express-firestore.svg)](https://david-dm.org/marcoshuck/typescript-express-firestore) ![](https://img.shields.io/github/forks/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/stars/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/license/marcoshuck/typescript-express-firestore.svg) ![](https://img.shields.io/github/issues/marcoshuck/typescript-express-firestore.svg)
 
 ## Features
 This project has or uses the following features:
